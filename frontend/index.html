@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 <head>
   <meta charset="utf-8" />
-  <title>Kontti LEMP Esimerkki</title>
+  <title>CICD Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    img {
+      max-width: 260px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #005bbb;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: white;
+      padding: 25px 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 700px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Frontend (Nginx) konteilla cicd</h1>
-  <div id="msg">Loading...</div>
-  <script>
-    fetch('/cicd/api')
-      .then(r => r.json())
-      .then(d => { document.getElementById('msg').innerText = d.message; })
-      .catch(e => { document.getElementById('msg').innerText = 'API error: ' + e; });
-  </script>
-  <div id="time">Loading time...</div>
-  <script>
-    fetch('/cicd/api/time')
-      .then(r => r.json())
-      .then(d => { document.getElementById('time').innerText = d.time; })
-      .catch(e => { document.getElementById('time').innerText = 'API error: ' + e; });
-  </script>
+
+  <div class="card">
+    <h1>CICD Demo</h1>
+
+    <img src="https://media.tenor.com/7Ywgd0CQpZ4AAAAC/troll-linux.gif"
+         alt="Linux Troll GIF" />
+
+<n reitteihin.</p>
+
+    <ul>
+      <li><a href="/cicd/api/time">Time endpoint (/api/time)</a></li>
+      <li><a href="/cicd/api/health">Health endpoint (/api/health)</a></li>
+    </ul>
+  </div>
+
 </body>
 </html>
